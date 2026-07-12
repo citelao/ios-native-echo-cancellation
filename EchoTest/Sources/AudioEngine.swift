@@ -69,7 +69,7 @@ final class EchoAudioEngine: ObservableObject {
     private func buildGraphAndStart() {
         do {
             let session = AVAudioSession.sharedInstance()
-            try session.setCategory(.playAndRecord, mode: .voiceChat, options: [.defaultToSpeaker, .allowBluetooth])
+            try session.setCategory(.playAndRecord, options: [.defaultToSpeaker, .allowBluetooth])
             try session.setActive(true)
         } catch {
             errorMessage = "Failed to configure audio session: \(error.localizedDescription)"
