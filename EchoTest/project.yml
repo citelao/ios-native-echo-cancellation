@@ -1,0 +1,26 @@
+name: EchoTest
+options:
+  bundleIdPrefix: com.citelao
+targets:
+  EchoTest:
+    type: application
+    platform: iOS
+    deploymentTarget: "17.0"
+    sources:
+      - Sources
+    info:
+      path: Sources/Info.plist
+      properties:
+        CFBundleDisplayName: EchoTest
+        NSMicrophoneUsageDescription: "EchoTest plays your microphone input back to you to test echo cancellation."
+        UILaunchScreen: {}
+        UIRequiresFullScreen: true
+        UISupportedInterfaceOrientations:
+          - UIInterfaceOrientationPortrait
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.citelao.echotest
+        TARGETED_DEVICE_FAMILY: "1,2"
+        SWIFT_VERSION: 5.0
+        CODE_SIGN_STYLE: Automatic
+        DEVELOPMENT_TEAM: 4F887ZT7HR
